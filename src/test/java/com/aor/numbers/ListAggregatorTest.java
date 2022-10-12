@@ -7,42 +7,39 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ListAggregatorTest {
+
+    public List<Integer> helper(){
+        List<Integer> list = Arrays.asList(1,2,4,2,5);
+        return list;
+    }
     @Test
     public void sum() {
-        List<Integer> list = Arrays.asList(1,2,4,2,5);
-
         ListAggregator aggregator = new ListAggregator();
-        int sum = aggregator.sum(list);
+        int sum = aggregator.sum(helper());
 
         Assertions.assertEquals(14, sum);
     }
 
     @Test
     public void max() {
-        List<Integer> list = Arrays.asList(1,2,4,2,5);
-
         ListAggregator aggregator = new ListAggregator();
-        int max = aggregator.max(list);
+        int max = aggregator.max(helper());
 
         Assertions.assertEquals(5, max);
     }
 
     @Test
     public void min() {
-        List<Integer> list = Arrays.asList(1,2,4,2,5);
-
         ListAggregator aggregator = new ListAggregator();
-        int min = aggregator.min(list);
+        int min = aggregator.min(helper());
 
         Assertions.assertEquals(1, min);
     }
 
     @Test
     public void distinct() {
-        List<Integer> list = Arrays.asList(1,2,4,2,5);
-
         ListAggregator aggregator = new ListAggregator();
-        int distinct = aggregator.distinct(list);
+        int distinct = aggregator.distinct(helper());
 
         Assertions.assertEquals(4, distinct);
     }
