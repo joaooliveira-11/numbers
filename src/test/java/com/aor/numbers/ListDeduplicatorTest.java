@@ -7,14 +7,17 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ListDeduplicatorTest {
+    public List<Integer> helper(){
+        List<Integer> list = Arrays.asList(1,2,4,2,5);
+        return list;
+    }
 
     @Test
     public void deduplicate() {
-        List<Integer> list = Arrays.asList(1,2,4,2,5);
         List<Integer> expected = Arrays.asList(1,2,4,5);
 
         ListDeduplicator deduplicator = new ListDeduplicator();
-        List<Integer> distinct = deduplicator.deduplicate(list);
+        List<Integer> distinct = deduplicator.deduplicate(helper());
 
         Assertions.assertEquals(expected, distinct);
     }
