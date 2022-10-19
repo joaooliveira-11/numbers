@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.aor.numbers.ListSorterTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-10-19T08:04:54" hostname="LAPTOP-RM9MUP23" time="0.003">
+<testsuite name="com.aor.numbers.ListSorterTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-10-19T09:28:13" hostname="LAPTOP-RM9MUP23" time="0.035">
   <properties/>
-  <testcase name="sort()" classname="com.aor.numbers.ListSorterTest" time="0.001"/>
+  <testcase name="sort()" classname="com.aor.numbers.ListSorterTest" time="0.032"/>
   <testcase name="sort_bug()" classname="com.aor.numbers.ListSorterTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

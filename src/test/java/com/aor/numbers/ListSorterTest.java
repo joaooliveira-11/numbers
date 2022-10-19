@@ -24,9 +24,10 @@ public class ListSorterTest {
 
     @Test
     public void sort_bug() {
-        List<Integer> expected = Arrays.asList(1, 2, 4, 2);
+        List<Integer> before = Arrays.asList(1, 2, 4, 2);
+        List<Integer> after = Arrays.asList(1, 2, 2, 4);
         ListSorter sorter = new ListSorter();
-        List<Integer> sorted = sorter.sort(expected);
-        Assertions.assertEquals(expected, sorted);
+        List<Integer> sorted = sorter.sort(before);
+        Assertions.assertEquals(after, sorted);
     }
 }
