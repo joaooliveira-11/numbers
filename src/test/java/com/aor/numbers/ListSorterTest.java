@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ListSorterTest {
-    public List<Integer> helper(){
+    public List<Integer> helper() {
         List<Integer> list = Arrays.asList(3, 2, 6, 1, 4, 5, 7);
         return list;
     }
@@ -19,6 +19,14 @@ public class ListSorterTest {
         ListSorter sorter = new ListSorter();
         List<Integer> sorted = sorter.sort(helper());
 
+        Assertions.assertEquals(expected, sorted);
+    }
+
+    @Test
+    public void sort_bug() {
+        List<Integer> expected = Arrays.asList(1, 2, 4, 2);
+        ListSorter sorter = new ListSorter();
+        List<Integer> sorted = sorter.sort(expected);
         Assertions.assertEquals(expected, sorted);
     }
 }
