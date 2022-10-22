@@ -1,15 +1,17 @@
 package com.aor.numbers;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class ListDeduplicatorTest {
-    public List<Integer> helper(){
-        List<Integer> list = Arrays.asList(1,2,4,2,5);
-        return list;
+    private List<Integer> list;
+    @BeforeEach
+    public void setUp() {
+        list = Arrays.asList(1, 2, 4, 2, 5);
     }
 
     @Test
@@ -25,7 +27,7 @@ public class ListDeduplicatorTest {
         List<Integer> expected = Arrays.asList(1,2,4,5);
 
         GenericListDeduplicator deduplicator = new ListDeduplicator();
-        List<Integer> distinct = deduplicator.deduplicate(helper(),new ListSorter());
+        List<Integer> distinct = deduplicator.deduplicate(list);
 
         Assertions.assertEquals(expected, distinct);
     }
@@ -41,7 +43,7 @@ public class ListDeduplicatorTest {
         List<Integer> expected = Arrays.asList(1,2,4,2);
         ListDeduplicator deduplicator = new ListDeduplicator();
 
-        List<Integer> distinct = deduplicator.deduplicate(expected, new StubListSorter());
+        List<Integer> distinct = deduplicator.deduplicate(expected);
         Assertions.assertEquals(expected, distinct);
     }
 }
