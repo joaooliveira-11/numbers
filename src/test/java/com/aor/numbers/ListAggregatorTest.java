@@ -81,6 +81,6 @@ public class ListAggregatorTest {
         GenericListDeduplicator deduplicator = new StubDeduplicator();
         int distinct = aggregator.distinct(list,deduplicator);
 
-        Assertions.assertEquals(3, distinct);
+        Assertions.assertEquals(4, distinct);
     }
 }

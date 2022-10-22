@@ -40,7 +40,7 @@ public class ListDeduplicatorTest {
                 return Arrays.asList(1,2,2,4);
             }
         }
-        List<Integer> expected = Arrays.asList(1,2,4,2);
+        List<Integer> expected = Arrays.asList(1,2,4);
         ListDeduplicator deduplicator = new ListDeduplicator();
 
         List<Integer> distinct = deduplicator.deduplicate(expected);
