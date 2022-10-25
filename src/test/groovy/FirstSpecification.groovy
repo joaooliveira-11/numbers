@@ -1,6 +1,6 @@
 import spock.lang.Specification
 
-class FirstSpecification extends Specification{
+class FirstSpecification extends Specification {
 
     def "two plus two should equal four"() {
         given:
@@ -40,5 +40,4 @@ class FirstSpecification extends Specification{
         2 | 2 | 4
         3 | 2 | 9
     }
-
 }
